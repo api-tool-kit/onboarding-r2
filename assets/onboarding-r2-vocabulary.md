@@ -18,6 +18,7 @@
  * dateScheduled
  * notes
  * status (active, pending, closed)
+ * ratingValue
  * dateCreated
  * dateUpdated
 
@@ -34,8 +35,10 @@
    * division(Military)[R], spendingLimit(1000), discountPercentage(0)
  * addActivityInfo
    * activityType(email)[R], dateScheduled, notes
+ * addCreditCheckInfo
+   * ratingValue(5)[R]
  * approveOnboarding
    * status(active)[R]
- * recjectOnboarding
+ * rejectOnboarding
    * status(closed)[R]
 

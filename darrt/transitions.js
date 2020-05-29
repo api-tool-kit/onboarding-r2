@@ -128,6 +128,19 @@
        ]
      },
      {
+       id:"addCreditCheck_{id}",
+       name:"addCreditCheck",
+       href:"{fullhost}/wip/{id}/credit-check",
+       rel: "item edit-form onboarding",
+       tags: "onboarding list item",
+       title: "Add CreditCheck",
+       method: "PUT",
+       properties: [
+         {name:"creditCheckId",value:"{creditCheckId}"},
+         {name:"ratingValue",value:"{ratingValue}"}
+       ]
+     },
+     {
        id:"approve_{id}",
        name:"approve",
        href:"{fullhost}/wip/{id}/status",

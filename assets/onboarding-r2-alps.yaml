@@ -66,7 +66,14 @@ alps:
         - href: '#accountId'
         - href: '#dateScheduled'
         - href: '#notes'
-  
+
+    - id: addCreditCheckInfo
+      type: idempotent
+      returns: '#onboarding'
+      descriptors:
+        - href: '#id'
+        - href: '#ratingValue'
+
     - id: approveOnboarding
       type: idemponent
       returns: '#onboarding'
@@ -125,6 +132,8 @@ alps:
         - href: status
           type: semantic
           text: 'suspended, pending, active, closed'
+        - href: ratingValue
+          type: semantic
         - href: dateCreated
           type: semantic
         - href: dateUpdated

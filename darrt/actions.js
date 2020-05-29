@@ -195,6 +195,41 @@ module.exports.writeActivity = function(req,res) {
   });
 }
 
+module.exports.readCreditCheck = function(req,res) {
+  return new Promise(function(resolve,reject){
+    if(req.params.id && req.params.id!==null) {
+      var id = req.params.id;
+      var fields=`id, status, dateCreated, dateUpdated, 
+        creditCheckId, ratingValue`
+      resolve(component({name:'onboarding',action:'item',id:id, fields:fields}));
+    } 
+    else {
+      reject({error:"missing id"});
+    }
+  });
+}
+
+module.exports.writeCreditCheck = function(req,res) {
+  var id,body;
+  return new Promise(function(resolve,reject){
+    id = req.params.id||null;
+    body = req.body||null;
+    if(id!==null && body!==null) {
+       resolve(component(
+         {name:'onboarding',
+          action:'update',
+          id:id,
+          item:body,
+          props:data.props,
+          reqd:data.reqd,
+          enums:data.enums}));
+     }
+     else {
+       reject({error:"missing id and/or body"});
+     }
+  });
+}
+
 module.exports.readStatus = function(req,res) {
   return new Promise(function(resolve,reject){
     if(req.params.id && req.params.id!==null) {

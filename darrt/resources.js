@@ -216,6 +216,38 @@ router.put('/wip/:id/activity', function(req,res){
   respond(args);
 });
 
+// get the creditcheck values for a single record
+router.get('/wip/:id/credit-check', function(req,res){
+  var args = {};
+  args.request = req;
+  args.response = res;
+  args.action = actions.readCreditCheck;
+  args.type = "onboarding";
+  args.config = {
+    metadata:metadata,
+    templates:templates,
+    forms:forms,
+    filter:"item"
+  }
+  respond(args);
+});
+
+// update the creditCheck values for a single record
+router.put('/wip/:id/credit-check', function(req,res){
+  var args = {};
+  args.request = req;
+  args.response = res;
+  args.action = actions.writeCreditCheck;
+  args.type = "onboarding";
+  args.config = {
+    metadata:metadata,
+    templates:templates,
+    forms:forms,
+    filter:"onboarding"
+  }
+  respond(args);
+});
+
 // get the status of a single record
 router.get('/wip/:id/status', function(req,res){
   var args = {};

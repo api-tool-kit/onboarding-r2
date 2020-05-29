@@ -1,8 +1,0 @@
-Onboarding Workflow
-===================
-
-home -> listOnboardingRecords -> createOnboardingRecord
-home -> listOnboardingRecords -> readOnboardingRecord
-readOnboardingRecord -> addCompanyInfo OR addAccountInfo OR addActivityInfo OR approveOnboarding OR rejectOnboarding
-
-

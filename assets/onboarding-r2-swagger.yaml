@@ -5,7 +5,7 @@ info:
   description: |-
     Onboarding API for BigCo, Inc.
 
-    This is a fORMS+JSON API sketch
+    This is a FORMS+JSON API sketch
 host: onboarding.example.org
 basePath: /
 schemes:
@@ -110,6 +110,18 @@ paths:
                           value: pending
                         - name: company-properties
                           value: ...
+                    - name: collectCreditCheckInfo
+                      href: /1q2w3e4r5t
+                      method: patch
+                      properties:
+                        - name: id
+                          value: 1q2w3e4r5t
+                        - name: href
+                          value: /1q2w3e4r5t
+                        - name: status
+                          value: pending
+                        - name: creditcheck-properties
+                          value: ...
                     - name: collectAccountInfo
                       href: /1q2w3e4r5t
                       method: patch
@@ -122,7 +134,7 @@ paths:
                           value: pending
                         - name: account-properties
                           value: ...
-                    - name: collectionActivityInfo
+                    - name: collectActivityInfo
                       href: /1q2w3e4r5t
                       method: patch
                       properties:

@@ -14,7 +14,9 @@ exports.props = [
   
   'accountId','division','spendingLimit','discountPercentage',
   
-  'activityId','activityType','dateScheduled','notes'
+  'activityId','activityType','dateScheduled','notes',
+
+  'creditCheckId','ratingValue'
 ];
 
 // required properties
@@ -24,14 +26,16 @@ exports.reqd = ['id','status'];
 exports.enums = [
   {status:['pending','active','suspended','closed']},
   {division:['DryGoods','Hardware','Software','Grocery','Pharmacy','Military']},
-  {activityType:['email','inperson','phone','letter']}
+  {activityType:['email','inperson','phone','letter']},
+  {ratingValue:['1','2','3','4','5','6','7','8','9','10']}
 ];
 
 exports.defs = [
   {name:"spendingLimit", value:"10000"},
   {name:"discountPercentage", value:"10"},
   {name:"activityType", value:"email"},
-  {name:"status",value:"pending"}
+  {name:"status",value:"pending"},
+  {name:"ratingValue",value:"5"}
 ]
 
 

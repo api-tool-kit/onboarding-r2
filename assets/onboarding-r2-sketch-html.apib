@@ -69,6 +69,7 @@ This is an HTML API sketch w/ forms
         <p>data fields display here...</p>
 
         <p><a href="/1q2w3e4r5t/company">Show Company Info Form</a></p>
+        <p><a href="/1q2w3e4r5t/credit-check">Show CreditCheck Info Form</a></p>
         <p><a href="/1q2w3e4r5t/account">Show Account Info Form</a></p>
         <p><a href="/1q2w3e4r5t/activity">Show Activity Info Form</a></p>
         <p><a href="/1q2w3e4r5t/approve">Show Approve Form</a></p>
@@ -93,6 +94,21 @@ This is an HTML API sketch w/ forms
 + Response 200 (text/html)
 
         <h1>COMPANY-INFO-FORM</h1>
+
+        <form name="create" action="/1q2w3e4r5t" method="post">
+           onboardingId:<input name="onboardingId" value="1q2w3e4r5t" />
+           status:<input name="status" value="pending" />
+           other properties:<input name="other-properties" value="..." />
+           <input type="submit" />
+        </form>
+
+## Add CreditCheck Info [/1q2w3e4r5t/credit-check]
+
+### Show CreditCheck Info Form [GET]
+
++ Response 200 (text/html)
+
+        <h1>CREDITCHECK-INFO-FORM</h1>
 
         <form name="create" action="/1q2w3e4r5t" method="post">
            onboardingId:<input name="onboardingId" value="1q2w3e4r5t" />
