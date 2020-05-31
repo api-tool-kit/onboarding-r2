@@ -1,6 +1,6 @@
 alps:
   version: '1.0'
-  description: ALPS document for BigCo Onboarding API
+  description: ALPS document for BigCo Onboarding-R2 API
   
   descriptors:
     - id: home
