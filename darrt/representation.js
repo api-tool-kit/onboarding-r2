@@ -18,8 +18,8 @@ var textCsv = require('./representors/text-csv');
 exports.getTemplates = function() {
   var list = [];
   
-  list.push(appJson.template);
   list.push(formsJson.template);
+  list.push(appJson.template);
   list.push(linksJson.template);
   list.push(pragJson.template);
   list.push(textCsv.template);
